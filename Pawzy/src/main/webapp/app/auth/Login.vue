@@ -1,7 +1,7 @@
 <template>
   <div class="login-container">
     <div class="form-wrapper">
-      <h1 class="title">Inicia Sesión en Pawzy</h1>
+      <h1 class="title">Pawzy - Iniciar Sesión</h1>
       <form @submit.prevent="handleLogin">
         <input
           type="email"
@@ -17,7 +17,7 @@
           class="input"
           required
         />
-        <button type="submit" class="button">Iniciar sesión</button>
+        <button type="submit" class="button">Entrar</button>
       </form>
     </div>
   </div>
@@ -29,11 +29,16 @@ import { ref } from 'vue';
 const email = ref('');
 const password = ref('');
 
-const handleLogin = () => {
-  console.log('Email:', email.value);
-  console.log('Password:', password.value);
-  // Aquí puedes añadir la lógica para autenticar al usuario
-};
+function handleLogin() {
+  // Simulamos login sin backend
+  if (email.value && password.value) {
+    alert(`Bienvenido, ${email.value}`);
+    // Redirigimos al feed
+    window.location.href = '/feed';
+  } else {
+    alert('Credenciales inválidas');
+  }
+}
 </script>
 
 <style scoped>
@@ -42,46 +47,43 @@ const handleLogin = () => {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f5f5f5;
+  background-color: #f8f5f0; /* Beige suave */
 }
 
 .form-wrapper {
-  background-color: #fff;
-  padding: 24px;
+  background-color: #fffaf5; /* Tono crema */
+  padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .title {
   text-align: center;
   font-size: 1.5rem;
-  margin-bottom: 24px;
-  color: #ff6f61;
+  margin-bottom: 1rem;
+  color: #6b4f4f; /* Marrón suave */
 }
 
 .input {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 16px;
-  border: 1px solid #ddd;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 1rem;
+  outline: none;
 }
 
 .button {
   width: 100%;
-  background-color: #ff6f61;
-  color: white;
-  padding: 12px;
-  font-size: 1rem;
+  background-color: #a37c7c; /* Marrón más fuerte */
+  color: #fff;
+  padding: 0.75rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .button:hover {
-  background-color: #e65b55;
+  background-color: #8f6b6b;
 }
 </style>

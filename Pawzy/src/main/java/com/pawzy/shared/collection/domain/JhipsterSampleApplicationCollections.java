@@ -1,4 +1,4 @@
-package com.mycompany.myapp.shared.collection.domain;
+package com.pawzy.shared.collection.domain;
 
 import java.util.Collection;
 import java.util.Collections;

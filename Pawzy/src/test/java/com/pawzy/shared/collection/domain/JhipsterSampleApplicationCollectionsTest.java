@@ -1,4 +1,4 @@
-package com.mycompany.myapp.shared.collection.domain;
+package com.pawzy.shared.collection.domain;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -12,7 +12,7 @@ import java.util.Set;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import com.mycompany.myapp.UnitTest;
+import com.pawzy.UnitTest;
 
 @UnitTest
 class JhipsterSampleApplicationCollectionsTest {

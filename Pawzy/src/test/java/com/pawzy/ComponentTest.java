@@ -1,4 +1,4 @@
-package com.mycompany.myapp;
+package com.pawzy;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

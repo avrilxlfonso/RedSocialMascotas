@@ -1,4 +1,4 @@
-package com.mycompany.myapp.shared.error.infrastructure.primary;
+package com.pawzy.shared.error.infrastructure.primary;
 
 import static org.mockito.Mockito.*;
 
@@ -11,10 +11,10 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.core.MethodParameter;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.MethodArgumentNotValidException;
-import com.mycompany.myapp.Logs;
-import com.mycompany.myapp.LogsSpy;
-import com.mycompany.myapp.LogsSpyExtension;
-import com.mycompany.myapp.UnitTest;
+import com.pawzy.Logs;
+import com.pawzy.LogsSpy;
+import com.pawzy.LogsSpyExtension;
+import com.pawzy.UnitTest;
 
 @UnitTest
 @ExtendWith(LogsSpyExtension.class)

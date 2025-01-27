@@ -1,4 +1,4 @@
-package com.mycompany.myapp;
+package com.pawzy;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -7,7 +7,7 @@ import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import java.util.Set;
 import java.util.function.Predicate;
-import com.mycompany.myapp.shared.error.domain.Assert;
+import com.pawzy.shared.error.domain.Assert;
 
 public final class BeanValidationAssertions {
 

@@ -1,4 +1,4 @@
-package com.mycompany.myapp.shared.error.infrastructure.primary;
+package com.pawzy.shared.error.infrastructure.primary;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import com.mycompany.myapp.IntegrationTest;
+import com.pawzy.IntegrationTest;
 
 @IntegrationTest
 @AutoConfigureMockMvc

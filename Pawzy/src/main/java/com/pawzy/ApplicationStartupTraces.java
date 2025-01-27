@@ -1,4 +1,4 @@
-package com.mycompany.myapp;
+package com.pawzy;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -7,8 +7,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.env.Environment;
-import com.mycompany.myapp.shared.error.domain.Assert;
-import com.mycompany.myapp.shared.generation.domain.ExcludeFromGeneratedCodeCoverage;
+import com.pawzy.shared.error.domain.Assert;
+import com.pawzy.shared.generation.domain.ExcludeFromGeneratedCodeCoverage;
 
 final class ApplicationStartupTraces {
 

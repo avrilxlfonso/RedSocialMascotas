@@ -1,4 +1,4 @@
-package com.mycompany.myapp;
+package com.pawzy;
 
 import static org.assertj.core.api.Assertions.*;
 

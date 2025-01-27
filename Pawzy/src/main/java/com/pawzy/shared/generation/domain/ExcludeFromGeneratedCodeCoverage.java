@@ -1,4 +1,4 @@
-package com.mycompany.myapp.shared.generation.domain;
+package com.pawzy.shared.generation.domain;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

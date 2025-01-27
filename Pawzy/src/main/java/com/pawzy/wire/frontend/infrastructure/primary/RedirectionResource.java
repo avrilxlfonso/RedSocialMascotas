@@ -1,9 +1,9 @@
-package com.mycompany.myapp.wire.frontend.infrastructure.primary;
+package com.pawzy.wire.frontend.infrastructure.primary;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import com.mycompany.myapp.shared.generation.domain.ExcludeFromGeneratedCodeCoverage;
+import com.pawzy.shared.generation.domain.ExcludeFromGeneratedCodeCoverage;
 
 @Controller
 @ExcludeFromGeneratedCodeCoverage

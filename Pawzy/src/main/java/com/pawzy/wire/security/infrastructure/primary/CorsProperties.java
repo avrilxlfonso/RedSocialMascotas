@@ -1,4 +1,4 @@
-package com.mycompany.myapp.wire.security.infrastructure.primary;
+package com.pawzy.wire.security.infrastructure.primary;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package com.mycompany.myapp.shared.error.domain;
+package com.pawzy.shared.error.domain;
 
 public enum AssertionErrorType {
   MISSING_MANDATORY_VALUE,

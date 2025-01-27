@@ -1,10 +1,10 @@
-package com.mycompany.myapp.shared.error.domain;
+package com.pawzy.shared.error.domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.time.Instant;
 import org.junit.jupiter.api.Test;
-import com.mycompany.myapp.UnitTest;
+import com.pawzy.UnitTest;
 
 @UnitTest
 class NotBeforeTimeExceptionTest {

@@ -1,9 +1,9 @@
-package com.mycompany.myapp.shared.error.domain;
+package com.pawzy.shared.error.domain;
 
 import static org.assertj.core.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
-import com.mycompany.myapp.UnitTest;
+import com.pawzy.UnitTest;
 
 @UnitTest
 class NullElementInCollectionExceptionTest {

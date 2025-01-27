@@ -1,2 +1,4 @@
-@com.mycompany.myapp.SharedKernel
-package com.mycompany.myapp.shared.error;
+@SharedKernel
+package com.pawzy.shared.error;
+
+import com.pawzy.SharedKernel;

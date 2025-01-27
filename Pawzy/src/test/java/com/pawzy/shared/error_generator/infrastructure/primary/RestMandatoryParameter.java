@@ -1,4 +1,4 @@
-package com.mycompany.myapp.shared.error_generator.infrastructure.primary;
+package com.pawzy.shared.error_generator.infrastructure.primary;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotBlank;

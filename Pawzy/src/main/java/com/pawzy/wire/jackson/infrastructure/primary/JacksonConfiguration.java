@@ -1,4 +1,4 @@
-package com.mycompany.myapp.wire.jackson.infrastructure.primary;
+package com.pawzy.wire.jackson.infrastructure.primary;
 
 import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
 import org.springframework.context.annotation.Bean;

@@ -1,2 +1,4 @@
-@com.mycompany.myapp.SharedKernel
-package com.mycompany.myapp.wire.frontend;
+@SharedKernel
+package com.pawzy.wire.frontend;
+
+import com.pawzy.SharedKernel;

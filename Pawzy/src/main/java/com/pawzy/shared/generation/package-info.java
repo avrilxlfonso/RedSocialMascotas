@@ -1,2 +1,4 @@
-@com.mycompany.myapp.SharedKernel
-package com.mycompany.myapp.shared.generation;
+@SharedKernel
+package com.pawzy.shared.generation;
+
+import com.pawzy.SharedKernel;

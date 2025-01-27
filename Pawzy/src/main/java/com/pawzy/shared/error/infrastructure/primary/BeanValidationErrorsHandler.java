@@ -1,4 +1,4 @@
-package com.mycompany.myapp.shared.error.infrastructure.primary;
+package com.pawzy.shared.error.infrastructure.primary;
 
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;

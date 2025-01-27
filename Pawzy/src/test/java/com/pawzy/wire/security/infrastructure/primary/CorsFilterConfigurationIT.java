@@ -1,4 +1,4 @@
-package com.mycompany.myapp.wire.security.infrastructure.primary;
+package com.pawzy.wire.security.infrastructure.primary;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.filter.CorsFilter;
-import com.mycompany.myapp.IntegrationTest;
+import com.pawzy.IntegrationTest;
 
 @IntegrationTest
 class CorsFilterConfigurationIT {

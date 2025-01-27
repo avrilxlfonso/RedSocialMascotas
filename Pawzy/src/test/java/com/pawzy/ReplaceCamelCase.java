@@ -1,4 +1,4 @@
-package com.mycompany.myapp;
+package com.pawzy;
 
 import java.lang.reflect.Method;
 import org.junit.jupiter.api.DisplayNameGenerator;
