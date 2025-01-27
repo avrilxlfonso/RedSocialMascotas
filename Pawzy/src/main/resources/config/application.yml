@@ -1,0 +1,12 @@
+logging:
+  level:
+    com:
+      mycompany:
+        myapp: INFO
+spring:
+  application:
+    name: JhipsterSampleApplication
+  jackson:
+    default-property-inclusion: non_absent
+server:
+  port: 8080
