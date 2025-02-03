@@ -80,8 +80,8 @@
     <section class="collections-section">
       <div class="collections-container">
         <div class="collections-text">
-          <h2>Guarda las mejores fotos de mascotas</h2>
-          <p>Recopila tus favoritos y vuelve a verlos después.</p>
+          <h2 class="title2">Guarda las mejores fotos de mascotas</h2>
+          <p class="title2">Recopila tus favoritos y vuelve a verlos después.</p>
           <button class="explore-button">Explorar</button>
         </div>
         <div class="collections-grid">
@@ -98,6 +98,10 @@
             <span class="collection-title">Animales salvajes</span>
           </div>
           <div class="collection-item">
+            <img src="https://placebear.com/300/300" alt="Animales salvajes">
+            <span class="collection-title">Animales salvajes</span>
+          </div>
+          <div class="collection-item">
             <img src="../../content/images/funnydogs.jpg" alt="Perritos">
             <span class="collection-title">Cachorros tiernos</span>
           </div>
@@ -108,8 +112,6 @@
         </div>
       </div>
     </section>
-
-
 
     <!-- 🔻 Pie de Página -->
     <footer class="footer">
@@ -179,12 +181,15 @@ onMounted(() => {
 </script>
 
 <style scoped>
+*{
+  box-sizing: border-box;
+}
 /* Contenedor principal */
 .landing-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f7f2ed;
+  background-color: #ffffff;
 }
 h1{
   font-size: 55px;
@@ -240,7 +245,7 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
+  background-color: #ba4242;
 }
 
 .pinterest-grid {
@@ -271,7 +276,7 @@ h1{
 /* 🔽 Indicador Scroll Down */
 .scroll-down-indicator {
   margin-top: 20px;
-  font-size: 24px;
+  font-size: 54px;
   font-weight: bold;
   color: #a37c7c;
   animation: bounce 1.5s infinite;
@@ -286,7 +291,7 @@ h1{
 .info-section {
   text-align: center;
   padding: 2rem;
-  color: #6b4f4f;
+  color: #4c0f0f;
 }
 
 .info-section h2 {
@@ -480,7 +485,7 @@ h1{
 }
 
 .footer-links a:hover {
-  color: #e60023; /* Color rojo similar al de Pinterest */
+  color: #c50228; /* Color rojo similar al de Pinterest */
 }
 
 .footer-text {
@@ -491,7 +496,7 @@ h1{
 
 /* 🌟 Sección de Colecciones */
 .collections-section {
-  background-color: #eafaf1; /* Verde claro similar a la imagen */
+  background-color: #701921; /* Verde claro similar a la imagen */
   padding: 4rem 2rem;
   display: flex;
   justify-content: center;
@@ -511,17 +516,17 @@ h1{
 
 .collections-text h2 {
   font-size: 2rem;
-  color: #1a4d2e; /* Verde oscuro */
+  color: #ffffff; /* Verde oscuro */
 }
 
 .collections-text p {
   font-size: 1.2rem;
-  color: #355e3b;
+  color: #c55965;
   margin-bottom: 1rem;
 }
 
 .explore-button {
-  background-color: #e60023; /* Rojo Pinterest */
+  background-color: #2e0b10; /* Rojo Pinterest */
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -531,7 +536,7 @@ h1{
 }
 
 .explore-button:hover {
-  background-color: #c2001a;
+  background-color: #cd4f55;
 }
 
 /* 🖼️ Diseño de las colecciones */
@@ -592,6 +597,7 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 </style>
