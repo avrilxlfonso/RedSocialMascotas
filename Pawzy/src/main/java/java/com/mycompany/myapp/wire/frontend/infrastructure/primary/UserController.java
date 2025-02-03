@@ -1,13 +1,14 @@
-package com.mycompany.myapp.wire.frontend.infrastructure.primary;
+package java.com.mycompany.myapp.wire.frontend.infrastructure.primary;
 
 
-import com.mycompany.myapp.shared.collection.service.UserService;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.com.mycompany.myapp.shared.collection.service.UserService;
 
 @RestController
 @RequestMapping("/api/users")

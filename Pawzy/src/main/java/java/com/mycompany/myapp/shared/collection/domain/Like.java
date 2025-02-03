@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "likes")
-class Like {
+public class Like {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -18,8 +18,7 @@ class Like {
   private Foto foto;
 
   // Constructor vacío
-  public Like() {
-  }
+  public Like() {}
 
   // Constructor con parámetros
   public Like(Long id, Usuario usuario, Foto foto) {
@@ -28,28 +27,11 @@ class Like {
     this.foto = foto;
   }
 
-  // Getters y setters
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public Usuario getUsuario() {
-    return usuario;
-  }
-
-  public void setUsuario(Usuario usuario) {
-    this.usuario = usuario;
-  }
-
-  public Foto getFoto() {
-    return foto;
-  }
-
-  public void setFoto(Foto foto) {
-    this.foto = foto;
-  }
+  // Getters y Setters
+  public Long getId() { return id; }
+  public void setId(Long id) { this.id = id; }
+  public Usuario getUsuario() { return usuario; }
+  public void setUsuario(Usuario usuario) { this.usuario = usuario; }
+  public Foto getFoto() { return foto; }
+  public void setFoto(Foto foto) { this.foto = foto; }
 }
