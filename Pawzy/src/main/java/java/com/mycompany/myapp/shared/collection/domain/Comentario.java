@@ -3,26 +3,31 @@ package java.com.mycompany.myapp.shared.collection.domain;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "fotos")
-class Foto {
+@Table(name = "comentarios")
+class Comentario {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  private String url;
+  private String contenido;
 
   @ManyToOne
   @JoinColumn(name = "usuario_id")
   private Usuario usuario;
 
+  @ManyToOne
+  @JoinColumn(name = "foto_id")
+  private Foto foto;
+
   // Constructor vacío
-  public Foto() {
+  public Comentario() {
   }
 
   // Constructor con parámetros
-  public Foto(Long id, String url, Usuario usuario) {
+  public Comentario(Long id, String contenido, Usuario usuario, Foto foto) {
     this.id = id;
-    this.url = url;
+    this.contenido = contenido;
     this.usuario = usuario;
+    this.foto = foto;
   }
 
   // Getters y setters
@@ -34,12 +39,12 @@ class Foto {
     this.id = id;
   }
 
-  public String getUrl() {
-    return url;
+  public String getContenido() {
+    return contenido;
   }
 
-  public void setUrl(String url) {
-    this.url = url;
+  public void setContenido(String contenido) {
+    this.contenido = contenido;
   }
 
   public Usuario getUsuario() {
@@ -49,6 +54,12 @@ class Foto {
   public void setUsuario(Usuario usuario) {
     this.usuario = usuario;
   }
+
+  public Foto getFoto() {
+    return foto;
+  }
+
+  public void setFoto(Foto foto) {
+    this.foto = foto;
+  }
 }
-
-

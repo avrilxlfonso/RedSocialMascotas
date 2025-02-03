@@ -75,6 +75,42 @@
         </form>
       </div>
     </div>
+
+    <!-- 🌟 Sección de Colecciones de Mascotas -->
+    <section class="collections-section">
+      <div class="collections-container">
+        <div class="collections-text">
+          <h2>Guarda las mejores fotos de mascotas</h2>
+          <p>Recopila tus favoritos y vuelve a verlos después.</p>
+          <button class="explore-button">Explorar</button>
+        </div>
+        <div class="collections-grid">
+          <div class="collection-item large">
+            <img src="https://placedog.net/500/400" alt="Perros adorables">
+            <span class="collection-title">Mis perros favoritos</span>
+          </div>
+          <div class="collection-item">
+            <img src="../../content/images/cat-1.jpg" alt="Gatos adorables">
+            <span class="collection-title">Gatos curiosos</span>
+          </div>
+          <div class="collection-item">
+            <img src="https://placebear.com/300/300" alt="Animales salvajes">
+            <span class="collection-title">Animales salvajes</span>
+          </div>
+          <div class="collection-item">
+            <img src="../../content/images/funnydogs.jpg" alt="Perritos">
+            <span class="collection-title">Cachorros tiernos</span>
+          </div>
+          <div class="collection-item">
+            <img src="../../content/images/dog.jpg" alt="Divertidos">
+            <span class="collection-title">Fotos divertidas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
     <!-- 🔻 Pie de Página -->
     <footer class="footer">
       <div class="footer-container">
@@ -96,7 +132,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref , onMounted} from 'vue';
 
 // Manejo de modales
 const showLoginModal = ref(false);
@@ -121,6 +157,25 @@ function registerUser() {
   alert(`Registrando usuario: ${registerEmail.value}`);
   showRegisterModal.value = false;
 }
+
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  document.querySelectorAll(".collection-item").forEach((item) => {
+    observer.observe(item);
+  });
+});
+
 </script>
 
 <style scoped>
@@ -419,7 +474,7 @@ h1{
 
 .footer-links a {
   text-decoration: none;
-  color: #555;
+  color: #ffffff;
   font-size: 14px;
   transition: color 0.3s ease;
 }
@@ -430,7 +485,112 @@ h1{
 
 .footer-text {
   font-size: 12px;
-  color: #777;
+  color: #b53939;
+}
+
+
+/* 🌟 Sección de Colecciones */
+.collections-section {
+  background-color: #eafaf1; /* Verde claro similar a la imagen */
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.collections-container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* 📜 Texto de la sección */
+.collections-text {
+  max-width: 40%;
+}
+
+.collections-text h2 {
+  font-size: 2rem;
+  color: #1a4d2e; /* Verde oscuro */
+}
+
+.collections-text p {
+  font-size: 1.2rem;
+  color: #355e3b;
+  margin-bottom: 1rem;
+}
+
+.explore-button {
+  background-color: #e60023; /* Rojo Pinterest */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.explore-button:hover {
+  background-color: #c2001a;
+}
+
+/* 🖼️ Diseño de las colecciones */
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.collection-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+}
+
+.collection-item.large {
+  width: 300px;
+  height: 300px;
+}
+
+.collection-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.collection-item:hover img {
+  transform: scale(1.05);
+}
+
+.collection-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+/* 🖱️ Efecto de desplazamiento suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🌟 Efecto de aparición suave */
+.collection-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.collection-item.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
