@@ -1,0 +1,11 @@
+logging:
+  config: classpath:logback.xml
+  level:
+    com:
+      mycompany:
+        myapp: 'OFF'
+spring:
+  main:
+    banner-mode: 'off'
+server:
+  port: 0

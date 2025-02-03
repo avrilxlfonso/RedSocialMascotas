@@ -1,0 +1,31 @@
+logging:
+  level:
+    com:
+      mycompany:
+        myapp: INFO
+spring:
+  application:
+    name: JhipsterSampleApplication
+  jackson:
+    default-property-inclusion: non_absent
+server:
+  port: 8080
+
+  spring:
+    datasource:
+
+      url: jdbc:mysql://localhost:3306/pawzy?useSSL=false&serverTimezone=UTC
+      username: root
+      password: 07011971Gominola! # Asegúrate de que esta sea la contraseña correcta de tu usuario 'root'
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+      hibernate:
+        ddl-auto: update # Esto actualizará el esquema de la base de datos según las entidades de JPA
+      show-sql: true # Para ver las consultas SQL generadas en la consola
+      properties:
+        hibernate:
+          format_sql: true
+
+
+
+
