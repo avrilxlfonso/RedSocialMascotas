@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # JHipster Sample Application
 
 ## Prerequisites
@@ -48,6 +47,3 @@ npm install
 - [CORS configuration](documentation/cors-configuration.md)
 
 <!-- jhipster-needle-documentation -->
-=======
-# RedSocialMascotas
->>>>>>> 3156bac7b1cc1f12e73e6f67700d24fb7503c2dc
