@@ -1,4 +1,4 @@
-package com.mycompany.myapp.shared.collection.domain;
+package java.com.mycompany.myapp.shared.collection.domain;
 
 
 import jakarta.persistence.*;
@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import org.springframework.data.annotation.Id;
 
 import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Mascota {
@@ -23,7 +24,7 @@ public class Mascota {
   private User usuario;
 
   @OneToMany(mappedBy = "mascota", cascade = CascadeType.ALL, orphanRemoval = true)
-  private Set<Foto> fotos = new HashSet<>();
+  private Set<Foto> fotos = new HashSet<Foto>();
 
   // Getters y Setters
 
@@ -58,6 +59,8 @@ public class Mascota {
   public void setFotos(Set<Foto> fotos) {
     this.fotos = fotos;
   }
+
+
 
 }
 

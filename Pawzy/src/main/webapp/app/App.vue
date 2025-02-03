@@ -2,8 +2,9 @@
   <router-view />
 </template>
 
-<script lang="ts">
-export default {
-  name: 'AppVue',
-};
+<script setup>
 </script>
+
+<style scoped>
+/* opcional */
+</style>

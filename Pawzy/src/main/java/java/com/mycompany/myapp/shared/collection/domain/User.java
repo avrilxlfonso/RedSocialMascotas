@@ -1,4 +1,4 @@
-package com.mycompany.myapp.shared.collection.domain;
+package java.com.mycompany.myapp.shared.collection.domain;
 
 // Backend: src/main/java/com/mycompany/myapp/domain/User.java
 
@@ -9,10 +9,12 @@ import org.hibernate.validator.constraints.Email;
 import org.springframework.data.annotation.Id;
 
 import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class User {
 
+  @jakarta.persistence.Id
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -73,4 +75,5 @@ public class User {
   public void setMascotas(Set<Mascota> mascotas) {
     this.mascotas = mascotas;
   }
+
 }

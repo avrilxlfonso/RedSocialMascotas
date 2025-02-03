@@ -1,89 +1,123 @@
 <template>
-  <div class="login-container">
-    <div class="form-wrapper">
-      <h1 class="title">Pawzy - Iniciar Sesión</h1>
-      <form @submit.prevent="handleLogin">
-        <input
-          type="email"
-          v-model="email"
-          placeholder="Correo electrónico"
-          class="input"
-          required
-        />
-        <input
-          type="password"
-          v-model="password"
-          placeholder="Contraseña"
-          class="input"
-          required
-        />
-        <button type="submit" class="button">Entrar</button>
-      </form>
-    </div>
+  <div class="login-page">
+    <!-- Cabecera para la página de login -->
+    <header class="login-header">
+      <div class="logo-section" @click="goHome">
+        <img src="../../content/images/animals.png" alt="Logo" class="logo-img" height="100" />
+        <img src="../../content/images/letraLogo.png" alt="Logo" class="logo-img" />
+      </div>
+      <button @click="goRegister" class="nav-button nav-button--outline">Registrarse</button>
+    </header>
+
+    <!-- Contenido de login -->
+    <section class="login-content">
+      <div class="login-form">
+        <h2>Iniciar Sesión</h2>
+        <form @submit.prevent="submitLogin">
+          <label>Correo electrónico</label>
+          <input v-model="email" type="email" required />
+
+          <label>Contraseña</label>
+          <input v-model="password" type="password" required />
+
+          <button type="submit" class="btn-submit">Entrar</button>
+        </form>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const email = ref('');
 const password = ref('');
 
-function handleLogin() {
-  // Simulamos login sin backend
-  if (email.value && password.value) {
-    alert(`Bienvenido, ${email.value}`);
-    // Redirigimos al feed
-    window.location.href = '/feed';
-  } else {
-    alert('Credenciales inválidas');
-  }
+function goHome() {
+  router.push('/');
+}
+function goRegister() {
+  router.push('/register');
+}
+
+function submitLogin() {
+  alert(`Iniciando sesión: ${email.value}`);
+  // Aquí iría tu lógica real
 }
 </script>
 
 <style scoped>
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.login-page {
   min-height: 100vh;
-  background-color: #f8f5f0; /* Beige suave */
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f5f0;
 }
 
-.form-wrapper {
-  background-color: #fffaf5; /* Tono crema */
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff;
 }
 
-.title {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #6b4f4f; /* Marrón suave */
+.logo-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-.input {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  outline: none;
+.logo-img {
+  width: 100px;
+  height: auto;
+  margin-right: 0.5rem;
 }
 
-.button {
-  width: 100%;
-  background-color: #a37c7c; /* Marrón más fuerte */
-  color: #fff;
-  padding: 0.75rem;
-  border: none;
+
+.nav-button--outline {
+  background-color: transparent;
+  border: 2px solid #a37c7c;
+  color: #a37c7c;
+  padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.button:hover {
-  background-color: #8f6b6b;
+.login-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.login-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.login-form label {
+  font-weight: bold;
+  color: #6b4f4f;
+}
+
+.login-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.btn-submit {
+  background-color: #a37c7c;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
+  border-radius: 4px;
 }
 </style>

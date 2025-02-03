@@ -1,4 +1,4 @@
-package com.mycompany.myapp.shared.collection.domain;
+package java.com.mycompany.myapp.shared.collection.domain;
 
 
 import jakarta.persistence.*;
